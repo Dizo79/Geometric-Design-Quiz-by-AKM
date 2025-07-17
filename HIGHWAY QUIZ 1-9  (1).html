@@ -1,0 +1,154 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Highway Quiz</title>
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 18px; padding: 20px; }
+    .question { display: none; }
+    .question.active { display: block; }
+    .options label { display: block; margin-bottom: 8px; }
+    .correct { background-color: #d4edda; }
+    .wrong { background-color: #f8d7da; }
+    .navigation { margin-top: 20px; }
+    .navigation button { font-size: 16px; padding: 8px 12px; margin-right: 10px; }
+    #result { margin-top: 30px; font-weight: bold; font-size: 20px; color: #2e7d32; }
+  </style>
+</head>
+<body>
+  <h2>Highway Engineering Quiz</h2>
+  <form id="quizForm">
+    <div class="question active">
+      <p>1. For the preparation of highways:</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="a"> (a) Longitudinal sections are required</label>
+        <label><input type="radio" name="q1" value="b"> (b) Cross-sections are required</label>
+        <label><input type="radio" name="q1" value="c"> (c) (a) and (b) are required</label>
+        <label><input type="radio" name="q1" value="d"> (d) None of the above</label>
+      </div>
+    </div>
+    <div class="question">
+      <p>2. Camber in the road is provided for:</p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="a"> (a) Effective drainage</label>
+        <label><input type="radio" name="q2" value="b"> (b) Counteracting the centrifugal force</label>
+        <label><input type="radio" name="q2" value="c"> (c) Having proper sight distance</label>
+        <label><input type="radio" name="q2" value="d"> (d) All the above</label>
+      </div>
+    </div>
+    <div class="question">
+      <p>3. The curve provided at the change of gradient is called:</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="a"> (a) Horizontal curve</label>
+        <label><input type="radio" name="q3" value="b"> (b) Transition curve</label>
+        <label><input type="radio" name="q3" value="c"> (c) Reverse curve</label>
+        <label><input type="radio" name="q3" value="d"> (d) Vertical curve</label>
+      </div>
+    </div>
+    <div class="question">
+      <p>4. The recommended camber for water-bound macadam road is:</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="a"> (a) 1 in 40 to 1 in 50</label>
+        <label><input type="radio" name="q4" value="b"> (b) 1 in 33 to 1 in 40</label>
+        <label><input type="radio" name="q4" value="c"> (c) 1 in 25 to 1 in 33</label>
+        <label><input type="radio" name="q4" value="d"> (d) 1 in 20 to 1 in 25</label>
+      </div>
+    </div>
+    <div class="question">
+      <p>5. The ideal form of the curve for the summit curve is:</p>
+      <div class="options">
+        <label><input type="radio" name="q5" value="a"> (a) Spiral</label>
+        <label><input type="radio" name="q5" value="b"> (b) Parabola</label>
+        <label><input type="radio" name="q5" value="c"> (c) Circle</label>
+        <label><input type="radio" name="q5" value="d"> (d) Lemniscate</label>
+      </div>
+    </div>
+    <div class="question">
+      <p>6. The camber for hill roads in case of bituminous surface is adopted as:</p>
+      <div class="options">
+        <label><input type="radio" name="q6" value="a"> (a) 2.0%</label>
+        <label><input type="radio" name="q6" value="b"> (b) 2.5%</label>
+        <label><input type="radio" name="q6" value="c"> (c) 3.0%</label>
+        <label><input type="radio" name="q6" value="d"> (d) 3.5%</label>
+      </div>
+    </div>
+    <div class="question">
+      <p>7. If the stopping distance and average length of a vehicle are 18 m and 6 m respectively, then the theoretical maximum capacity (vehicles per hour) of a traffic lane at a speed of 10 m/s is:</p>
+      <div class="options">
+        <label><input type="radio" name="q7" value="a"> (a) 1500</label>
+        <label><input type="radio" name="q7" value="b"> (b) 2000</label>
+        <label><input type="radio" name="q7" value="c"> (c) 2500</label>
+        <label><input type="radio" name="q7" value="d"> (d) 3000</label>
+      </div>
+    </div>
+    <div class="question">
+      <p>8. The centrifugal force on a car moving on a horizontal circular curve is proportional to:</p>
+      <div class="options">
+        <label><input type="radio" name="q8" value="a"> (a) Wv²/(gR)</label>
+        <label><input type="radio" name="q8" value="b"> (b) Wv/(gR)</label>
+        <label><input type="radio" name="q8" value="c"> (c) Wv²/(gR²)</label>
+        <label><input type="radio" name="q8" value="d"> (d) Wv/(gR²)</label>
+      </div>
+    </div>
+    <div class="question">
+      <p>9. The ruling minimum radius of the curve for ruling design speed 'V' m/sec is:</p>
+      <div class="options">
+        <label><input type="radio" name="q9" value="a"> (a) V² / (e – f)g</label>
+        <label><input type="radio" name="q9" value="b"> (b) V² / (f – e)g</label>
+        <label><input type="radio" name="q9" value="c"> (c) V² / (e + f)g</label>
+        <label><input type="radio" name="q9" value="d"> (d) V² / (e + f)2g</label>
+      </div>
+    </div>
+    <div class="navigation">
+      <button type="button" onclick="prevQuestion()">Previous</button>
+      <button type="button" onclick="nextQuestion()">Next</button>
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </div>
+    <div id="result"></div>
+  </form>  <script>
+    const correctAnswers = ['c','a','d','b','c','b','a','a','c'];
+    let currentQuestion = 0;
+    const questions = document.querySelectorAll('.question');
+    showQuestion(currentQuestion);
+
+    function showQuestion(index) {
+      questions.forEach((q, i) => {
+        q.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextQuestion() {
+      if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        showQuestion(currentQuestion);
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+      }
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      correctAnswers.forEach((answer, i) => {
+        const selected = document.querySelector(`input[name="q${i+1}"]:checked`);
+        const labels = document.querySelectorAll(`input[name="q${i+1}"]`);
+        labels.forEach(radio => {
+          const label = radio.parentElement;
+          label.classList.remove('correct', 'wrong');
+          if (radio.value === answer) {
+            label.classList.add('correct');
+          }
+        });
+        if (selected && selected.value === answer) {
+          score++;
+        } else if (selected) {
+          selected.parentElement.classList.add('wrong');
+        }
+      });
+      document.getElementById('result').innerHTML = `Score: ${score} / 9<br><br>Well Done my friends; Keep it up;<br><span style="color: blue; font-weight: bold;">Created by Your Friend ( AKM )</span><br><br><br>Check I.E.S Master book for Solution`;
+    }
+  </script></body>
+</html>
